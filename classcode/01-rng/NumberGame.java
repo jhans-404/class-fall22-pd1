@@ -7,8 +7,21 @@ public class NumberGame
         Scanner s = new Scanner(System.in);
         Random r = new Random();
 
-        int mysteryNumber = r.nextInt(100) + 1; // place-holder for now
+        System.out.println("What mode do you want?\nEasy\nMedium\nHard");
+        String mode = s.nextLine();
 
+        int maximum;
+        if(mode.equals("Easy")) {
+          maximum = 10;
+        } // end if statement
+        else if (mode.equals("Medium")) {
+          maximum = 50;
+        } // end else if statement
+        else {
+          maximum = 100;
+        } // end else statement
+
+        int mysteryNumber = r.nextInt(maximum) + 1; // place-holder for now
         System.out.println(mysteryNumber);
 
         System.out.print("Enter your guess: ");
