@@ -1,11 +1,13 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class NumberGame
 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
+        Random r = new Random();
 
-        int mysteryNumber = 5; // place-holder for now
+        int mysteryNumber = r.nextInt(100) + 1; // place-holder for now
 
         System.out.println(mysteryNumber);
 
