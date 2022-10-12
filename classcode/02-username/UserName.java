@@ -10,10 +10,13 @@ public class UserName {
     String firstName = s.nextLine();
     System.out.print("Enter your last name: ");
     String lastName = s.nextLine();
+    System.out.print("What is your favorite number? ");
+    String favNum = s.nextLine();
 
     // test output
     System.out.println("Hello " + initialize(firstName) + "." + initialize(lastName) + ".");
-
+    System.out.println(favNum);
+    
     s.close();
   } // end main method
 
