@@ -14,19 +14,19 @@ public class UserName {
     String favNum = s.nextLine();
 
     // test output
-    System.out.println("Hello " + initialize(firstName) + "." + initialize(lastName) + ".");
+    System.out.println("Hello " + getInitial(firstName) + "." + getInitial(lastName) + ".");
     System.out.println(favNum);
-    
+
     s.close();
   } // end main method
 
   /*
-   * Name: initialize
+   * Name: getInitial
    * Purpose: send back the first character (inital) of a name
    * Input: a name (String)
    * Return: a single character (String)
    */
-  public static String initialize(String n) {
+  public static String getInitial(String n) {
     return n.substring(0, 1);
   } // end initialize method
 
