@@ -30,4 +30,16 @@ public class UserName {
     return n.substring(0, 1);
   } // end initialize method
 
+  public static String generatePassword(int length) {
+    String password = "";
+
+    // need a loop of len "length"
+
+    // pull a random number from range (65-90 CAPS) (48-57 #s) (97-122 lower)
+
+    // convert int to char (c =(char)i;)
+
+    // append char to the String password (password = password + c)
+    return password;
+  }
 } // end class
