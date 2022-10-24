@@ -14,7 +14,9 @@ Primary organizational hub for those enrolled in this course.
   - PDF: https://drive.google.com/file/d/1eSPBcLSLwoAvXXOmZl9RS8CS9K2XR7AF/view?usp=sharing
 - Think Java (Downey & Mayfield):
   - Text: https://books.trinket.io/thinkjava2/
-
+- CS Awesome
+  - Interactive Text: https://runestone.academy/ns/books/published/csawesome/index.html
+  
 ## Our work repos
 - [Eric](https://github.com/fdrHighSchool/mp1-work-ericc380)
 - [Boxuan](https://github.com/fdrHighSchool/mp1-work-giao193)
