@@ -7,10 +7,12 @@ public class CoordinatePlane {
 
     System.out.print("Please enter a point in the form (x, y): ");
     // write a statement to store the input
+    point1 = s.nextLine();
 
     // check if the user input the point correctly
     // if yes, continue code
     // if no, get the input again
+    System.out.println(checkInput(point1));
 
     System.out.print("Please enter a second point: ");
     // write a statement to store the input
@@ -29,9 +31,26 @@ public class CoordinatePlane {
    * N: checkInput
    * P: determine whether or not the input followed correct format
    * I: String user typed in
-   * R: ???
+   * R: true/false
    */
+  public static boolean checkInput(String p) {
+    boolean status = true;
 
+    // not strong enough, is it first?
+    if (p.indexOf("(") == -1) {
+      status = false;
+    }
+    // not strong enough, is it last?
+    if (p.indexOf(")") == -1) {
+      status = false;
+    }
+    // comma, then space right after
+    if (p.indexOf(", ") == -1) {
+      status = false;
+    }
+
+    return status;
+  } // end checkInput method
 
   /*
    * N: getX
