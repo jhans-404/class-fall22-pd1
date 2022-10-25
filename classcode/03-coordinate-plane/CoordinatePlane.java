@@ -36,12 +36,12 @@ public class CoordinatePlane {
   public static boolean checkInput(String p) {
     boolean status = true;
 
-    // not strong enough, is it first?
-    if (p.indexOf("(") == -1) {
+    // stronger version...first character
+    if (p.indexOf("(") != 0) {
       status = false;
     }
-    // not strong enough, is it last?
-    if (p.indexOf(")") == -1) {
+    // stronger version...last character
+    if (p.indexOf(")") != p.length() - 1) {
       status = false;
     }
     // comma, then space right after
