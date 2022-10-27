@@ -4,26 +4,38 @@ public class CoordinatePlane {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
     String point1, point2;
+    boolean isValid;
 
-    System.out.print("Please enter a point in the form (x, y): ");
-    // write a statement to store the input
-    point1 = s.nextLine();
+    do {
+      System.out.print("Please enter a point in the form (x, y): ");
+      // write a statement to store the input
+      point1 = s.nextLine();
 
-    // check if the user input the point correctly
-    // if yes, continue code
-    // if no, get the input again
-    System.out.println(checkInput(point1));
+      // check if the user input the point correctly
+      // if yes, continue code
+      // if no, get the input again
+      isValid = checkInput(point1);
+      if (!isValid) {
+        System.out.println("You entered the point in incorrectly!");
+      }
+    } while (!isValid);
 
-    System.out.print("Please enter a second point: ");
-    // write a statement to store the input
+    do {
+      System.out.print("Please enter a second point: ");
+      point2 = s.nextLine();
 
-    // check if the user input the point correctly
-    // if yes, continue code
-    // if no, get the input again
-
+      isValid = checkInput(point2);
+      if (!isValid) {
+        System.out.println("You entered the point in incorrectly!");
+      }
+    } while (!isValid);
 
     // test your methods below:
-
+    int x1 = getX(point1);
+    int y1 = getY(point1);
+    int x2 = getX(point2);
+    int y2 = getY(point2);
+    System.out.println(euclideanDistance(x1, y1, x2, y2));
 
   } // end main method
 
@@ -75,6 +87,17 @@ public class CoordinatePlane {
    * I: coordinate in the form (x, y) (String)
    * R: y-coordinate (int)
    */
+  public static int getY(String point) {
+    // determine where the comma is located
+    int commaPos = point.indexOf(",");
+    int endParenPos = point.indexOf(")");
+
+    // grab substring from comma up to but not including closing parenthesis
+    String y = point.substring(commaPos + 2, endParenPos);
+
+    // return value back to main so it can be used later in the program
+    return Integer.parseInt(y);
+  } // end getX method
 
 
   /*
@@ -89,10 +112,12 @@ public class CoordinatePlane {
    * N: euclideanDistance
    * P: calculate the distance between two points
         sqrt((x2 - x1)^2 + (y2 - y1)^2)
-   * I:
-   * R:
+   * I: 4 ints (x1, y1, x2, y2)
+   * R: double
    */
-
+  public static double euclideanDistance(int x1, int y1, int x2, int y2) {
+    return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)); // (x1 - x2)*(x1-x2)
+  } // end euclideanDistance method
 
   /*
    * N: taxicabDistance
