@@ -18,7 +18,7 @@ Primary organizational hub for those enrolled in this course.
   - Interactive Text: https://runestone.academy/ns/books/published/csawesome/index.html
   
 ## Our work repos
-- [Eric](https://github.com/fdrHighSchool/mp1-work-ericc380)
+- Eric [MP1](https://github.com/fdrHighSchool/mp1-work-ericc380) [MP2](https://github.com/fdrHighSchool/mp2-work-ericc380)
 - [Boxuan](https://github.com/fdrHighSchool/mp1-work-giao193)
 - [Ruizhe](https://github.com/fdrHighSchool/mp1-work-PatientZerr)
 - [Moustafa](https://github.com/fdrHighSchool/mp1-work-Moustafae6)
